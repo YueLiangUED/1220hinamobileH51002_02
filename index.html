@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <meta name="apple-mobile-web-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" /> 
+    <meta name="format-detection" content="email=no" />
+    <link rel="stylesheet" type="text/css" href="css/reset-app.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript">
+        // 建议竖屏访问
+        ;(function rotate(){
+            var orientation=window.orientation;
+            if(orientation==90||orientation==-90){
+                alert("为了更好的的体验，请使用竖屏模式！");
+            }
+            window.onorientationchange=function(){
+                document.body.style.display="block";
+                rotate();
+            };
+        })();
+        // 尺寸脚本
+        ;(function (global) {
+            function remChange() {
+                document.documentElement.style.fontSize = 100 * document.documentElement.clientWidth / 750 + 'px';
+            }
+            remChange();
+            global.addEventListener('resize', remChange, false);
+        })(window);
+    </script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <title>中国移动</title>
+</head>
+<body>
+    <!-- 页面html代码开始 -->
+    <div class="view-wraper">
+        <!-- loading页 -->
+        <div class="page-loading" style="">
+            <div class="logo">
+                <img src="images/logo.png" alt="" />
+            </div>
+            <div>
+                <p>页面正在加载中，请稍后⋯</p>
+                <p class="progress-num">0%</p>
+            </div>
+        </div>
+
+        
+        <!-- 登录页 -->
+        <div class="page-container login">
+            <div class="logo">
+                <img src="images/logo.png" alt="" />
+            </div>
+            <div class="page-content login-content">
+                <div class="login-welcome">
+                    <span>WELCOME</span><i></i>
+                </div>
+                <div class="login-form-group">
+                    <span class="login-form-title">手机号：</span><input class="login-form-tel" id="loginTel" type="tel" />
+                </div>
+                <div class="login-form-group">
+                    <span class="login-form-title">验证码：</span><input class="login-form-code" id="loginCode" type="tel" /><span class="login-form-code-btn">获取验证码</span>
+                </div>
+                <input class="login-form-submit" id="login" type="button" value="登录" />
+            </div>
+        </div>
+        
+        <!-- H5 -->
+        <div class="swiper-container" style="display: none;">
+            <div class="swiper-wrapper">
+                <!-- 首页 第一页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="first-content slide-content">
+                        <img class="img_01_01 first-img ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="images/img_01_01.png" alt="" />
+                        <img class="img_01_03 first-img ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_01_03.png" alt="" />
+                        <img class="img_01_02 first-img ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_01_02.png" alt="" />
+                        <img class="img_01_04 first-img ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="images/img_01_04.png" alt="" />
+                        <img class="img_01_05 first-img ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="images/img_01_05.png" alt="" />
+                        <img class="img_01_06 first-img ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_01_06.png" alt="" />
+                        <img class="img_01_07 first-img ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_01_07.png" alt="" />
+                        <img class="img_01_08 first-img ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="images/img_01_08.png" alt="" />
+                        <img class="img_01_09 first-img ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" src="images/img_01_09.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 感谢前言1 第二页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="seven-content slide-content">
+                        <img class="img_07_01 first-img ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_07_01.png" alt="" />
+                        <img class="img_07_02 first-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_07_02.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 感谢前言2 第三页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="seven-content slide-content">
+                        <img class="img_07_03 first-img ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_07_03.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 公司能力展示 第四页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content">
+                        <img class="first-img img_02_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_02_01.png" alt="" />
+                        <img class="first-img img_02_03" src="images/img_02_03.png" alt="" />
+                        <div class="se-item img_02_04 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+                            <img src="images/img_02_04.png" alt="" />
+                        </div>
+                        <div class="se-item img_02_05 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+                            <img src="images/img_02_05.png" alt="" />
+                        </div>
+                        <div class="se-item img_02_06 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+                            <img src="images/img_02_06.png" alt="" />
+                        </div>
+                        <div class="se-item img_02_07 ani"  swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+                            <img src="images/img_02_07.png" alt="" />
+                        </div>
+                        <div class="se-item img_02_08 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0">
+                            <img src="images/img_02_08.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 企业文化 第五页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content three-content">
+                        <img class="first-img img_03_01 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_03_01.png" alt="" />
+                        <img class="first-img img_03_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_03_02.png" alt="" />
+                        <img class="first-img img_03_03 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_03_03.png" alt="" />
+                        <img class="first-img img_03_04 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_03_04.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 5G场景1 第六页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content four-content">
+                        <img class="first-img img_04_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_04_01.png" alt="" />
+                        <img class="first-img img_04_02 ani" swiper-animate-effect="rotateInUpRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_04_02.png" alt="" />
+                        <img class="first-img img_04_03 ani" swiper-animate-effect="rotateInUpLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_04_03.png" alt="" />
+                        <img class="first-img img_04_04 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_04_04.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 5G场景2 第七页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content four-content_02">
+                        <img class="first-img img_12_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_12_01.png" alt="" />
+                        <img class="first-img img_12_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_12_02.png" alt="" />
+                        <img class="first-img img_12_04 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_12_04.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 5G场景3 第八页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content four-content_03">
+                        <img class="first-img img_13_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_13_01.png" alt="" />
+                        <img class="first-img img_13_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_13_02.png" alt="" />
+                        <img class="first-img img_13_04 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_13_04.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 5G场景4 第九页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content four-content_03">
+                        <img class="first-img img_14_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_14_01.png" alt="" />
+                        <img class="first-img img_14_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_14_02.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 5G场景5 第十页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content four-content_02">
+                        <img class="first-img img_15_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_15_01.png" alt="" />
+                        <img class="first-img img_15_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_15_02.png" alt="" />
+                        <img class="first-img img_15_03 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_15_03.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 5G场景6 第十一页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content four-content_04">
+                        <img class="first-img img_16_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_16_01.png" alt="" />
+                        <img class="first-img img_16_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_16_02.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 集团业务1 第十二页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content five-content">
+                        <img class="first-img img_05_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_05_01.png" alt="" />
+                        <img class="first-img img_05_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_05_02.png" alt="" />
+                        <img class="first-img img_05_03 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_05_03.png" alt="" />
+                        <img class="first-img img_05_04 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_05_04.png" alt="" />
+                        <img class="first-img img_05_05 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_05_05.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 集团业务2 第十三页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content five-content_01">
+                        <img class="first-img img_17_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_17_01.png" alt="" />
+                        <img class="first-img img_17_02 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_17_02.png" alt="" />
+                        <img class="first-img img_17_03 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_17_03.png" alt="" />
+                        <img class="first-img img_17_04 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_17_04.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 集团业务3 第十四页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content five-content_01">
+                        <img class="first-img img_18_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_18_01.png" alt="" />
+                        <img class="first-img img_18_02 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_18_02.png" alt="" />
+                        <img class="first-img img_18_03 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_18_03.png" alt="" />
+                        <img class="first-img img_18_04 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_18_04.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 个人业务 第十五页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content eight-content">
+                        <img class="first-img img_08_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_08_01.png" alt="" />
+                        <img class="first-img img_08_02 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_08_02.png" alt="" />
+                        <img class="first-img img_08_03 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_08_03.png" alt="" />
+                        <img class="first-img img_08_04 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_08_04.png" alt="" />
+                        <img class="first-img img_08_06 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_08_06.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 沟通管家 第十六页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content nine-content">
+                        <img class="first-img img_09_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_09_01.png" alt="" />
+                        <img class="first-img img_09_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_09_02.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                <!-- 魔百盒 第十七页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content ten-content">
+                        <img class="first-img img_10_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_01.png" alt="" />
+                        <img class="first-img img_10_02 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_02.png" alt="" />
+                        <img class="first-img img_10_03 ani" swiper-animate-effect="rotateInUpLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_03.png" alt="" />
+                        <img class="first-img img_10_04 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_04.png" alt="" />
+                        <img class="first-img img_10_05 ani" swiper-animate-effect="rotateInUpRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_05.png" alt="" />
+                        <img class="first-img img_10_06 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_06.png" alt="" />
+                        <img class="first-img img_10_07 ani" swiper-animate-effect="rotateInUpLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_03.png" alt="" />
+                        <img class="first-img img_10_08 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_07.png" alt="" />
+                        <img class="first-img img_10_09 ani" swiper-animate-effect="rotateInUpRight" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_05.png" alt="" />
+                        <img class="first-img img_10_10 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_10_08.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 云世界 第十八页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content eleven-content">
+                        <img class="first-img img_11_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_11_01.png" alt="" />
+                        <img class="first-img img_11_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_11_02.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+                
+                <!-- 家宽产品 第十九页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content nine-content">
+                        <img class="first-img img_19_01 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_19_01.png" alt="" />
+                        <img class="first-img img_19_02 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0" src="images/img_19_02.png" alt="" />
+                    </div>
+                    <div class="slide-btn">
+                        <img src="images/slid-btn.png" alt="" />
+                    </div>
+                </div>
+
+                 <!-- 业务体验领取 第二十页 -->
+                <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content six-content">
+                        <img class="first-img img_06_01"src="images/img_06_01.png" alt="" />
+                        <div class="card-list">
+                            <div class="card-scroll">
+                                <div class="card-item act">
+                                    <p class="card-item-title">4G自选套餐体验包<span>(半年)</span></p>
+                                    <p class="card-item-details"><span>88元档</span><span>语音220分钟</span><span>国内流量2GB</span></p>
+                                </div>
+                                <div class="card-item">
+                                    <p class="card-item-title">4G自选套餐体验包<span>(半年)</span></p>
+                                    <p class="card-item-details"><span>138元档</span><span>语音450分钟</span><span>国内流量4GB</span></p>
+                                </div>
+                                <div class="card-item">
+                                    <p class="card-item-title">4G自选套餐体验包<span>(半年)</span></p>
+                                    <p class="card-item-details"><span>188元档</span><span>语音700分钟</span><span>国内流量6GB</span></p>
+                                </div>
+                                <div class="card-item">
+                                    <p class="card-item-title">4G自选套餐体验包<span>(半年)</span></p>
+                                    <p class="card-item-details"><span>288元档</span><span>语音1200分钟</span><span>国内流量10GB</span></p>
+                                </div>
+                                <div class="card-item">
+                                    <p class="card-item-title">4G自选套餐体验包<span>(一年)</span></p>
+                                    <p class="card-item-details"><span>88元档</span><span>语音220分钟</span><span>国内流量2GB</span></p>
+                                </div>
+                                <div class="card-item">
+                                    <p class="card-item-title">4G自选套餐体验包<span>(一年)</span></p>
+                                    <p class="card-item-details"><span>138元档</span><span>语音450分钟</span><span>国内流量4GB</span></p>
+                                </div>
+                                <div class="card-item">
+                                    <p class="card-item-title">4G自选套餐体验包<span>(一年)</span></p>
+                                    <p class="card-item-details"><span>188元档</span><span>语音700分钟</span><span>国内流量6GB</span></p>
+                                </div>
+                                <div class="card-item">
+                                    <p class="card-item-title">4G自选套餐体验包<span>(一年)</span></p>
+                                    <p class="card-item-details"><span>288元档</span><span>语音1200分钟</span><span>国内流量10GB</span></p>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="login-form">
+                            <input class="handleInput" type="tel" placeholder="请输入手机号">
+                            <p class="shuom">您可输入自己手机号或转赠亲朋好友</p>
+                            <input class="enter-btn" type="button" value="点击领取">
+                        </div>
+                    </div>
+                </div>
+                 <!-- 业务体验领取 第二十页 -->
+                <!-- <div class="swiper-slide">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="" />
+                    </div>
+                    <div class="slide-content six-content">
+                        <div class="card-list card-list_02">
+                            <div class="card-item">
+                                <p class="card-item-title">4G自选套餐体验包<span>(全年)</span></p>
+                                <p class="card-item-details"><span>88元档</span><span>语音220分钟</span><span>国内流量2GB</span></p>
+                            </div>
+                            <div class="card-item">
+                                <p class="card-item-title">4G自选套餐体验包<span>(全年)</span></p>
+                                <p class="card-item-details"><span>138元档</span><span>语音450分钟</span><span>国内流量4GB</span></p>
+                            </div>
+                            <div class="card-item">
+                                <p class="card-item-title">4G自选套餐体验包<span>(全年)</span></p>
+                                <p class="card-item-details"><span>188元档</span><span>语音700分钟</span><span>国内流量6GB</span></p>
+                            </div>
+                            <div class="card-item">
+                                <p class="card-item-title">4G自选套餐体验包<span>(全年)</span></p>
+                                <p class="card-item-details"><span>288元档</span><span>语音1200分钟</span><span>国内流量10GB</span></p>
+                            </div>
+                        </div>
+                        <div class="login-form">
+                            <input class="handleInput" type="tel" placeholder="请输入手机号">
+                            <p class="shuom">您可输入自己手机号或转赠亲朋好友</p>
+                            <input class="enter-btn" type="button" value="点击领取">
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="audio-control">
+            <div class="audio-control-icon audioRotate"></div>
+        </div>
+        <audio id="myAudio" src="music/1.mp3" autoplay loop preload></audio>
+    </div>
+    <div class="modal" id="modal" style="display: none;">
+        <div class="flex justify-center align-center modal-flex">
+            <div class="modal-content">
+                <div class="modal-title">
+                    登录成功
+                </div>
+                <div class="modal-body">
+                    <p class="modal-text"></p>
+                    <div class="modal-enter">
+                        确认
+                    </div>
+                </div>
+                <div class="modal-close"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 页面html代码结束 -->
+    <script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
