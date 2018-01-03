@@ -158,8 +158,19 @@ $(function () {
             swiperAnimateCache(swiper);
             swiperAnimate(swiper);
         }, 
-        onSlideChangeEnd: function(swiper){ 
+        onSlideChangeEnd: function(swiper){
           swiperAnimate(swiper);
+          if (swiper.activeIndex == 19) {
+            // 业务说明
+            $(this).creatModal({
+                modalEle: '#modal',
+                modalTitle: '业务说明',
+                modalText: '<div style="text-indent: 2em;height: 7rem;overflow-y: scroll;text-align: left;">文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明文案说明</div>',
+                modalEnter: function (modal) {
+                    modal.Close();
+                }
+            });
+          }
         }
     });
 
