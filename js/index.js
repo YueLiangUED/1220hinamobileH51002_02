@@ -81,8 +81,13 @@ $(function () {
                 modalEle: '#modal', //弹窗元素
                 modalTile: '提示',   //弹窗title
                 modalText: '请输入您的手机号码！', //弹窗文字
+                closeShow: false, //是否显示右上角关闭按钮
+                cancelShow: fasle //是否显示取消按钮
                 modalEnter: function (modal) { //点击确定回调函数
-                    modal.Close();
+                    
+                }
+                modalCancel: function (modal) { //点击取消回调函数
+                    
                 }
             }
         * 
@@ -105,16 +110,27 @@ $(function () {
                     var modalText = $modal.find('.modal-text').html(this.text);
                     var $modalClose = $modal.find('.modal-close');
                     var $enter = $modal.find('.modal-enter');
+                    var $cancel = $modal.find('.modal-cancel');
                     if (option.closeShow == false) {
                         $modalClose.hide();
                     } else {
                         $modalClose.show();
-                    }
-                    $modalClose.on('touchend', function () {
+                    };
+
+                    if (option.cancelShow == true) {
+                        $cancel.show();
+                    } else {
+                        $cancel.hide();
+                    };
+
+                    $modalClose.one('touchend', function () {
                         _this.Close();
                     });
-                    $enter.on('touchend', function () {
+                    $enter.one('touchend', function () {
                         option.modalEnter(_this);
+                    });
+                    $cancel.one('touchend', function () {
+                        _this.Close();
                     });
 
                 },
@@ -388,6 +404,13 @@ $(function () {
         var loginform = $(this).parents('.login-form');
         var input = loginform.find('.handleInput');
         var v = input.val();
+        var d, s;
+        $('.card-item').each(function () {
+            if ($(this).hasClass('act')) {
+                d = $(this).find('.card-item-title').text();
+                s = $(this).find('.card-item-details span:first').text();
+            }
+        });
         $('.handleInput').val('');
         input.val(v);
         input[0].blur();
@@ -404,7 +427,22 @@ $(function () {
             });
             return false;
         }
-
+        $(this).creatModal({
+            modalEle: '#modal',
+            modalTitle: '手机号确认',
+            modalText: '是否为手机号' + t + '办理<br />' + s + d + '?',
+            cancelShow: true,
+            modalEnter: function (modal) {
+                $(this).creatModal({
+                    modalEle: '#modal',
+                    modalTitle: '提示',
+                    modalText: '办理成功！',
+                    modalEnter: function (modal) {
+                        modal.Close();
+                    }
+                }); 
+            }
+        });
         //请在ajax异步回调之后调用此段代码
         // (受邀用户)是否已经赠送他人或为自己办理过体验包，如果办理过提示：您已经办理过业务体验包！
         
@@ -433,14 +471,7 @@ $(function () {
         //请在ajax异步回调之后调用此段代码
         //办理成功后执行的代码
         
-        $(this).creatModal({
-            modalEle: '#modal',
-            modalTitle: '提示',
-            modalText: '办理成功！',
-            modalEnter: function (modal) {
-                modal.Close();
-            }
-        });   
+          
     });
     
 

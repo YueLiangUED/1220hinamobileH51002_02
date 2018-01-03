@@ -594,7 +594,7 @@ input.login-form-code {
     line-height: 0.6rem;
     box-sizing: border-box;
     border: 1px solid #8a8a8a;
-    border-radius: 8px;
+    border-radius: 4px;
     text-align: center;
     font-size: 0.32rem;
     color: #333;
@@ -639,7 +639,7 @@ input.login-form-code {
     text-align: center;
 }
 .card-item.act {
-    border-color: #e30d92;
+    background: #e30d92;
 }
 .card-item .card-item-title {
     padding-top: 0.2rem;
@@ -895,17 +895,26 @@ input.login-form-code {
 }
 .modal-body {
     line-height: 1.5em;
-    padding: 0.5rem;
     font-size: 0.3rem;
     color: #333;
     background-color: #fff;
     text-align: center;
+    padding-bottom: 0.5rem;
 }
-.modal-enter {
-    width: 3rem;
-    height: 0.8rem;
-    margin: 0 auto;
+.modal-text {
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+.modal-btns {
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    justify-content: space-around;
     margin-top: 0.5rem;
+}
+.modal-cancel,
+.modal-enter {
+    padding: 0 0.7rem;
+    height: 0.8rem;
     line-height: 0.8rem;
     background: linear-gradient(to right, #0980cd, #fb008b);
     text-align: center;
